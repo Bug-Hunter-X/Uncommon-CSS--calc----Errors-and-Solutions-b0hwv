@@ -1,0 +1,16 @@
+/* bug.css */
+.incorrect {
+  width: calc(100%-10px); /* Missing space causes error */
+  height: calc(50%+2em); /* Missing space */
+  margin: calc(10px+5%); /* Unit mismatch */
+}
+
+/* bugSolution.css */
+.correct {
+  width: calc(100% - 10px); /* Corrected: space added */
+  height: calc(50% + 2em); /* Corrected: space added */
+  margin: calc(10px + 5%); /* Fixed unit mismatch: 10px + 5% of container */
+  /* Example of more complex calc that is valid */
+  padding: calc((100vw - 20px)/2);
+}
+/* Further refinement in unit usage can be done based on context */
